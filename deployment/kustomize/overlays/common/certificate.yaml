@@ -1,11 +1,11 @@
 apiVersion: cert-manager.io/v1
 kind: Certificate
 metadata:
-  name: zah-sampleapp-certificate
+  name: lubo-sampleapp-certificate
 spec:
   dnsNames:
-  - 'zah.dacdevops.ru'
+  - 'lubo.dacdevops.ru'
   issuerRef:
     kind: ClusterIssuer
     name: yc-clusterissuer
-  secretName: zah-sampleapp-cert
+  secretName: lubo-sampleapp-cert

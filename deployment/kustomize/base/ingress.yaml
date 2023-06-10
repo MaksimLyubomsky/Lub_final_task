@@ -3,23 +3,23 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
   
 metadata:
-  name: zah-sampleapp-ingress
+  name: lubo-sampleapp-ingress
   annotations:
     kubernetes.io/ingress.class: "nginx"
 spec:   
   rules:   
-    - host: zah.dacdevops.ru
+    - host: lubo.dacdevops.ru
       http:
         paths:
           - path: /
             pathType: Prefix
             backend:
               service:
-                name: zah-sampleapp-service
+                name: lubo-sampleapp-service
                 port:
                   name: http
 
   tls:
     - hosts:
-      - zah.dacdevops.ru
-      secretName: zah-sampleapp-cert
+      - lubo.dacdevops.ru
+      secretName: lubo-sampleapp-cert

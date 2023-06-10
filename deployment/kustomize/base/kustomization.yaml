@@ -10,4 +10,4 @@ resources:
   - ingress.yaml
 
 images:
-  - name: minerva45/sampleapp
+  - name: aboobus/sampleapp
