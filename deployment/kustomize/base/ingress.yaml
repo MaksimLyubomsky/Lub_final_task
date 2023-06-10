@@ -1,0 +1,25 @@
+apiVersion: networking.k8s.io/v1
+   
+kind: Ingress
+  
+metadata:
+  name: zah-sampleapp-ingress
+  annotations:
+    kubernetes.io/ingress.class: "nginx"
+spec:   
+  rules:   
+    - host: zah.dacdevops.ru
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: zah-sampleapp-service
+                port:
+                  name: http
+
+  tls:
+    - hosts:
+      - zah.dacdevops.ru
+      secretName: zah-sampleapp-cert
