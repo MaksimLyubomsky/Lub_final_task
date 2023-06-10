@@ -15,6 +15,7 @@ spec:
       initContainers:
         - name: lubo-sampleapp-migrate
           image: aboobus/sampleapp:main
+          imagePullPolicy: Always
           ports:
             - containerPort: 8000
           envFrom:
@@ -27,6 +28,7 @@ spec:
       containers:
         - name: zlubo-sampleapp
           image: aboobus/sampleapp:main
+          imagePullPolicy: Always
           ports:
             - containerPort: 8000
           args: 
